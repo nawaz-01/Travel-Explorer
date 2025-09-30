@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wanderly — Find Your Next Adventure</title>
+  <meta name="description" content="Discover destinations, compare packages, and book your next trip with Wanderly.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0ea5e9">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="Wanderly home">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 11.5c4-4 10-4 14 0l4-4v9h-9l4-4c-3-3-8-3-11 0l-2-1z" fill="currentColor"/>
+        </svg>
+        <span>Wanderly</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <ul id="primary-nav" class="nav-list">
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+          <li><a class="btn btn-sm" href="#search">Book now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title">Find your next adventure</h1>
+          <p>Handpicked destinations, flexible packages, and traveler-first support. Explore the world with confidence.</p>
+          <div class="hero-ctas">
+            <a class="btn" href="#destinations">Explore destinations</a>
+            <a class="btn btn-ghost" href="#packages">View packages</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="Scenic mountain landscape with a lake" loading="eager">
+        </div>
+      </div>
+      <form id="search" class="search-panel container" role="search" aria-label="Search trips">
+        <div class="field">
+          <label for="q">Where to?</label>
+          <input id="q" name="q" type="text" placeholder="City or country" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="dates">Dates</label>
+          <input id="dates" name="dates" type="text" placeholder="Anytime">
+        </div>
+        <div class="field">
+          <label for="guests">Guests</label>
+          <input id="guests" name="guests" type="number" min="1" value="2">
+        </div>
+        <button class="btn" type="submit">Search</button>
+      </form>
+    </section>
+
+    <section id="destinations" class="section" aria-labelledby="destinations-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="destinations-title">Featured destinations</h2>
+          <p>Curated places trending with our community this season.</p>
+        </div>
+        <div class="grid grid-3 card-grid" data-filterable>
+          <article class="card" data-title="Kyoto, Japan">
+            <img src="https://images.unsplash.com/photo-1505064317868-33afcfa7436a?q=80&w=1200&auto=format&fit=crop" alt="Kyoto streets in autumn">
+            <div class="card-body">
+              <h3>Kyoto, Japan</h3>
+              <p>Temples, tea houses, and timeless traditions.</p>
+            </div>
+          </article>
+          <article class="card" data-title="Santorini, Greece">
+            <img src="https://images.unsplash.com/photo-1504274066651-8d31a536b11a?q=80&w=1200&auto=format&fit=crop" alt="Whitewashed houses of Santorini at sunset">
+            <div class="card-body">
+              <h3>Santorini, Greece</h3>
+              <p>Iconic sunsets over the Aegean Sea.</p>
+            </div>
+          </article>
+          <article class="card" data-title="Banff, Canada">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop" alt="Banff turquoise lake and mountains">
+            <div class="card-body">
+              <h3>Banff, Canada</h3>
+              <p>Glacial lakes and alpine adventures.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages" class="section section-alt" aria-labelledby="packages-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="packages-title">Flexible packages</h2>
+          <p>Build your perfect trip with transparent pricing and free cancellations.</p>
+        </div>
+        <div class="grid grid-3 card-grid">
+          <article class="card pricing">
+            <div class="card-body">
+              <h3>Explorer</h3>
+              <p class="price"><span>$</span>799</p>
+              <ul class="features">
+                <li>3 nights stay</li>
+                <li>City walking tour</li>
+                <li>Standard support</li>
+              </ul>
+              <a href="#search" class="btn btn-block">Choose Explorer</a>
+            </div>
+          </article>
+          <article class="card pricing popular" aria-label="Most popular package">
+            <div class="badge">Popular</div>
+            <div class="card-body">
+              <h3>Adventurer</h3>
+              <p class="price"><span>$</span>1299</p>
+              <ul class="features">
+                <li>5 nights stay</li>
+                <li>Guided excursions</li>
+                <li>Priority support</li>
+              </ul>
+              <a href="#search" class="btn btn-primary btn-block">Choose Adventurer</a>
+            </div>
+          </article>
+          <article class="card pricing">
+            <div class="card-body">
+              <h3>Luxury</h3>
+              <p class="price"><span>$</span>2299</p>
+              <ul class="features">
+                <li>7 nights stay</li>
+                <li>Private experiences</li>
+                <li>24/7 concierge</li>
+              </ul>
+              <a href="#search" class="btn btn-block">Choose Luxury</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="reviews-title">Traveler reviews</h2>
+          <p>Real stories from trips booked with us.</p>
+        </div>
+        <div class="grid grid-3 testimonial-grid">
+          <figure class="testimonial">
+            <blockquote>Everything was effortless. The local guide in Kyoto made our trip unforgettable.</blockquote>
+            <figcaption>
+              <img src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=256&auto=format&fit=crop" alt="Portrait of traveler Maya" loading="lazy">
+              <div>
+                <strong>Maya</strong>
+                <span>Solo traveler</span>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="testimonial">
+            <blockquote>The Adventurer package hit the sweet spot. Great value and adventures!</blockquote>
+            <figcaption>
+              <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=256&auto=format&fit=crop" alt="Portrait of traveler Daniel" loading="lazy">
+              <div>
+                <strong>Daniel</strong>
+                <span>Couple getaway</span>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="testimonial">
+            <blockquote>We loved the flexibility. Changing dates was a breeze with support.</blockquote>
+            <figcaption>
+              <img src="https://images.unsplash.com/photo-1541534401786-2077eed87a26?q=80&w=256&auto=format&fit=crop" alt="Portrait of traveler Priya" loading="lazy">
+              <div>
+                <strong>Priya</strong>
+                <span>Family trip</span>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="newsletter" class="section section-alt" aria-labelledby="newsletter-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="newsletter-title">Get travel deals in your inbox</h2>
+          <p>Monthly inspiration. No spam, unsubscribe anytime.</p>
+        </div>
+        <form class="newsletter-form" novalidate>
+          <label class="sr-only" for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+          <p class="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand">
+        <a class="logo" href="#top">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3 11.5c4-4 10-4 14 0l4-4v9h-9l4-4c-3-3-8-3-11 0l-2-1z" fill="currentColor"/>
+          </svg>
+          <span>Wanderly</span>
+        </a>
+        <p>© <span id="year"></span> Wanderly Travel Co.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
